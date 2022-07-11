@@ -1,0 +1,100 @@
+footer{
+	padding: 56px 0;
+	background-color: #333;
+	text-align: center;
+}
+.logo_bottom{
+	margin-right: 120px;
+	width: 200px;
+	height: 55px;
+	display: inline-block;
+	background: url(image\pirateslogomini1.png) no-repeat center center/contain;
+	text-indent: -9999px;
+	vertical-align: middle;
+}
+.info_lists{
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+.info_lists li{
+	margin-bottom: 12px;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 16px;
+}
+.contact_info{
+	margin-right: 30px;
+	position: relative;
+    display: inline-block;
+}
+.contact_info:after{
+	position: absolute;
+	display: block;
+	content: "";
+	width: 1px;
+	height: 100%;
+	top: 0;
+	right: calc(100% + 14px);
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.contact_info:first-of-type:after{
+	display: none;
+}
+.contact_info a{
+    color : rgba(255, 255, 255, 0.6);
+}
+
+@media all and (max-width:991px){
+    footer{
+        padding: 6.5104vw 0;
+    }
+    .logo_bottom{
+        margin: 0 auto;
+        display: block;
+        width: 20.8333vw;
+        height: 5.7292vw;
+    }
+    .info_lists{
+        margin-top: 2.6042vw;
+        text-align: center;
+    }
+    .info_lists li{
+        margin-bottom: 1.3021vw;
+        display: inline-block;
+        font-size: 2.0833vw;
+    }
+}
+
+@media all and (max-width:479px){
+    footer{
+        padding: 11.1111vw 0;
+    }
+    .logo_bottom{
+        margin: 0 auto;
+        width: 40.2778vw;
+        height: 11.1111vw;
+    }
+    .info_lists{
+        margin-top: 5.5556vw;
+        text-align: center;
+    }
+    .info_lists li{
+        padding: 0 2.7778vw;
+        margin-bottom: 1.3021vw;
+        font-size: 3.3333vw;
+        line-height: normal;
+    }
+    .contact_info{
+        display: inline-block;
+    }
+    .contact_info:nth-of-type(2), .contact_info:last-of-type{
+        margin-right: 0;
+    }
+    .contact_info:last-of-type:after{
+        display: none;
+    }
+    .contact_info:after{
+        height: 3.3333vw;
+        top: .8333vw;
+    }
+}

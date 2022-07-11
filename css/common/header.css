@@ -1,0 +1,313 @@
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+    height: 87px;
+	z-index: 100;
+    transition: all 0.2s linear;
+}
+.indicator{
+    background: #fff;
+    border-bottom: 1px solid #f58151;
+    transition: all 0.2s linear;
+}
+.logo_top{
+	position: absolute;
+	top: 35px;
+	left: 50px;
+	display: block;
+	width: 80px;
+	height: 22px;
+	background: url(image\pirateslogomini1.png) no-repeat center center/contain;
+	text-indent: -9999px;
+    transition: background 0.2s linear;
+}
+.indicator .logo_top{
+    transition: background 0.2s linear;
+    background-image: url("image\pirateslogomini1.png");
+}
+.logo_top a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.navigation_wrapper{
+    margin: 0 auto;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.navigation_wrapper.hidden{
+    display: none;
+}
+.nav_lists{
+	text-align: center;
+    white-space: nowrap;
+}
+.nav_list{
+	margin: 0 3.125vw;
+	padding: 5px;
+	position: relative;
+	display: inline-block;
+}
+.nav_list:first-of-type{
+	margin-left: 0;
+}
+.nav_list:last-of-type{
+	margin-right: 0;
+}
+.nav_title{
+    position: relative;
+    display: inline-block;
+	font-size: 18px;
+    line-height: 77px;
+    color: #fff;
+    transition: color 0.2s linear;
+}
+.nav_title:after{
+    content: "";
+    position: absolute;
+    width: 1.8229vw;
+    height: 1.8229vw;
+    top: 38%;
+    right: 0;
+    display: none;
+    transform: rotate(45deg);
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
+}
+.indicator .nav_title{
+    color: #333;
+    transition: color 0.2s linear;
+}
+.nav_title.active{
+	font-weight: bold;
+}
+.nav_title.active:hover{
+    text-decoration: none;
+}
+.nav_title.up:after{
+    top: 24%;
+    transform: rotate(225deg);
+}
+.nav_sub_lists{
+    padding-top: 25px;
+	position: absolute;
+    top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+}
+.nav_sub_lists li{
+	padding-bottom: 18px;
+}
+.nav_sub{
+    font-size: 18px;
+    color: #333;
+}
+.nav_sub:hover{
+    text-decoration: underline;
+}
+.nav_sub.active{
+	position: relative;
+	font-weight: bold;
+}
+.nav_sub.active:before{
+	position: absolute;
+	bottom: -1px;
+	left: -4px;
+	display: block;
+	content: "";
+	width: calc(100% + 8px);
+	height: 6px;
+	background-color: #f58151;
+	z-index: -1;
+}
+.nav_sub.active:hover{
+    text-decoration: none;
+}
+.bg_sub_nav{
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    top: 88px;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: none;
+}
+.change_language{
+	position: absolute;
+	top: 36px;
+	right: 50px;
+}
+.change_language span, .change_language a{
+    font-family: "GmarketSans", sans-serif;
+	color: #fff;
+	font-size: 14px;
+    transition: color 0.2s linear;
+}
+.indicator .change_language span, .indicator .change_language a{
+    color: #333;
+    transition: color 0.2s linear;
+}
+.change_language a.active{
+    font-weight: bold;
+}
+.btn_hamburger{
+    padding: 0;
+    position: absolute;
+    width: 27px;
+    height: 24px;
+    top: 40px;
+    right: 40px;
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.hamburger_line{
+    margin-bottom: 9px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+.btn_hamburger.is-active .hamburger_line:nth-child(2){
+  opacity: 0;
+}
+.btn_hamburger.is-active .hamburger_line:nth-child(1){
+  -webkit-transform: translateY(10px) rotate(45deg);
+  -ms-transform: translateY(10px) rotate(45deg);
+  -o-transform: translateY(10px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
+}
+.btn_hamburger.is-active .hamburger_line:nth-child(3){
+  -webkit-transform: translateY(-12px) rotate(-45deg);
+  -ms-transform: translateY(-12px) rotate(-45deg);
+  -o-transform: translateY(-12px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+@media all and (max-width:991px){
+    header{
+        height: 104px;
+    }
+    .logo_top{
+        top: 41px;
+        left: 40px;
+        background-image: url(image\pirateslogomini1.png);
+    }
+    .btn_hamburger{
+        display: block;
+    }
+    .indicator .hamburger_line{
+        background-color: #333;
+        transition: all 0.2s linear;
+    }
+    .navigation_wrapper{
+        width: 100%;
+        height: 100vh;
+        top: 105px;
+        background-color: #fff;
+        z-index: 10;
+        display: none;
+        overflow-y: auto;
+    }
+    header .btn_close{
+        display: block;
+    }
+    .navigation{
+        padding: 6.5104vw 0 19.5313vw;
+    }
+    .nav_list{
+        margin: 3.2552vw 0;
+        padding: 0;
+        display: block;
+    }
+    .nav_title{
+        padding: .3906vw 3.9063vw .3906vw .3906vw;
+        position: relative;
+        font-size: 3.3854vw;
+        line-height: normal;
+        color: #333;
+    }
+    .nav_title:after{
+        display: block;
+    }
+    .nav_sub_lists{
+        padding-top: 1.3021vw;
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+    .nav_sub_lists li{
+        margin-bottom: 1.3021vw;
+        padding-bottom: 0;
+    }
+    .nav_sub_lists li:last-of-type{
+        margin-bottom: 0;
+    }
+    .nav_sub{
+        font-size: 2.3438vw;
+        color: #333;
+    }
+    .change_language{
+        top: 42px;
+        right: 86px;
+    }
+    .change_language span, .change_language a{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width:479px){
+    header{
+        height: 60px;
+    }
+    .logo_top{
+        top: 19px;
+        left: 20px;
+        background-image: url(image\pirateslogomini1.png);
+    }
+    .btn_hamburger{
+        top: 18px;
+        right: 20px;
+    }
+    .navigation_wrapper{
+        top: 61px;
+    }
+    .navigation{
+        padding: 8.3333vw 0 41.6667vw;
+    }
+    .nav_list{
+        margin: 6.9444vw 0;
+        padding: 0;
+        display: block;
+    }
+    .nav_title{
+        padding: .8333vw 8.3333vw .8333vw .8333vw;
+        font-size: 7.2222vw;
+    }
+    .nav_title:after{
+        width: 3.8889vw;
+        height: 3.8889vw;
+    }
+    .nav_sub_lists{
+        padding-top: 2.7778vw;
+    }
+    .nav_sub_lists li{
+        margin-bottom: 2.7778vw;
+    }
+    .nav_sub{
+        font-size: 5vw;
+    }
+    .change_language{
+        top: 19px;
+        right: 62px;
+    }
+}

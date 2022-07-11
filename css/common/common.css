@@ -1,0 +1,73 @@
+@font-face{
+    font-family: "SourceHanSansKLight";
+    src: url(/fonts/SourceHanSansKR-Light.otf) format("opentype");
+}
+@font-face{
+    font-family: "SourceHanSansK";
+    src: url(/fonts/SourceHanSansKR-Regular.otf) format("opentype");
+    font-weight: normal;
+}
+@font-face{
+    font-family: "SourceHanSansK";
+    src: url(/fonts/SourceHanSansKR-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+@font-face{
+    font-family: "GmarketSansLight";
+    src: url(/fonts/GmarketSansTTFLight.ttf) format("truetype"), url("/fonts/GmarketSansTTFLight.eot") format("embedded-opentype"), url("/fonts/GmarketSansTTFLight.eot?#iefix") format("embedded-opentype");
+    font-weight: light;
+}
+@font-face{
+    font-family: "GmarketSans";
+    src: url(/fonts/GmarketSansTTFMedium.ttf) format("truetype"), url("/fonts/GmarketSansTTFMedium.eot") format("embedded-opentype"), url("/fonts/GmarketSansTTFMedium.eot?#iefix") format("embedded-opentype"), url("/fonts/GmarketSansTTFMedium.woff") format("woff");
+    font-weight: normal;
+}
+@font-face{
+    font-family: "GmarketSans";
+    src: url(/fonts/GmarketSansTTFBold.ttf) format("truetype"), url("/fonts/GmarketSansBold.eot") format("embedded-opentype"), url("/fonts/GmarketSansBold.eot?#iefix") format("embedded-opentype"), url("/fonts/GmarketSansBold.woff") format("woff");
+    font-weight: bold;
+}
+@font-face{
+    font-family: "SourceHanSerif";
+    src: url(/fonts/SourceHanSerifKR-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+html, body{
+    width: 100%;
+}
+body.hidden{
+    overflow: hidden;
+}
+.weight_bold{
+    font-weight: bold;
+}
+img{
+    width: 100%;
+}
+button{
+    cursor: pointer;
+    display: block;
+}
+a{
+    color: #333;
+}
+.break_line_pc{
+    display: block;
+}
+.mobile-br {
+    display: none;
+}
+@media all and (max-width:991px){
+    .break_line_pc{
+        display: inline;
+    }
+}
+@media all and (max-width:479px){
+    .break_line_m{
+        display: block;
+    }
+    .mobile-br {
+        display: block;
+    }
+}
