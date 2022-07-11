@@ -1,4 +1,4 @@
-/*메인 video*/
+/*ë©”ì¸ video*/
 .main_top{
     position: relative;
 	width: 100%;
@@ -11,7 +11,7 @@
 	left: 0;
 	width: 100%;
 	height: calc(100% - 110px);
-	background: no-repeat url(image\bg_main.png) center top/cover;
+	background: no-repeat url(/images/bg_main.png?20201012) center top/cover;
 }
 .banner_video video{
 	position: absolute;
@@ -169,7 +169,7 @@ span.lighter{
 	position: absolute;
     bottom: 0;
 	left: 0;
-    background: url('image\banner_line.png');
+    background: url(/images/banner_line.png);
 }
 .banner_line a{
     font-family: "GmarketSansLight", sans-serif !important;
@@ -823,7 +823,7 @@ h2{
     }
 }
 
-/*모바일 가로모드*/
+/*ëª¨ë°”ì¼ ê°€ë¡œëª¨ë“œ*/
 @media (min-width: 481px) and (max-width: 812px) and (orientation: landscape){
     .main_top{
         height: 780px;
